@@ -1,0 +1,29 @@
+# Data — do not commit raw or processed single-cell data
+data/
+*.h5ad
+*.h5
+*.mtx
+*.loom
+*.pickle
+*.p
+*.rds
+*.RData
+
+# Notebook checkpoints and caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.cache/
+cache/
+
+# Large exported figures / notebook PDFs
+*.pdf
+!docs/*.pdf
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.Rhistory
+.Rproj.user/
+.vscode/
+.idea/

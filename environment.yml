@@ -1,0 +1,29 @@
+# Conda environment for the Python single-cell analysis.
+# Create with:  conda env create -f environment.yml
+# Note: this reflects the tooling used in 2020; pinned major packages are
+# listed, versions can be adjusted to your platform.
+name: cardiac-scrnaseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.7
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - scikit-learn
+  - jupyter
+  - scanpy
+  - anndata
+  - python-igraph
+  - leidenalg
+  - bbknn
+  - scvelo
+  - pip
+  - pip:
+      - scrublet
+      - kneed          # elbow detection for cluster-number selection
+      - sccaf          # cluster self-projection accuracy assessment
+# CellPhoneDB was run separately (see https://github.com/ventolab/CellphoneDB).
+# Notebook 05 also imports an in-house `ClusterSupport` module (gap statistic) that is not included here.
